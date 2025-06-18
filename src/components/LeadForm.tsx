@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 
 const LeadForm = () => {
@@ -17,13 +18,23 @@ const LeadForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // For now, we'll just show a toast message
-    // Once Supabase is connected, this will store data in the database
-    console.log('Investment inquiry submitted:', formData);
+    // Create WhatsApp message
+    const whatsappMessage = `New Investment Inquiry:
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Investment Interests: ${formData.message || 'Not specified'}`;
+    
+    // Your WhatsApp number (replace with your actual number)
+    const whatsappNumber = "972123456789"; // Replace with your actual WhatsApp number
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
     
     toast({
-      title: "Thank you for your interest!",
-      description: "I'll get back to you within 24 hours with investment opportunities.",
+      title: "Redirecting to WhatsApp",
+      description: "You're being redirected to WhatsApp to send your inquiry.",
     });
     
     // Reset form
@@ -55,7 +66,7 @@ const LeadForm = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white font-medium mb-2">Full Name *</label>
+                  <Label className="block text-white font-medium mb-2">Full Name *</Label>
                   <Input
                     type="text"
                     name="name"
@@ -67,7 +78,7 @@ const LeadForm = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-white font-medium mb-2">Email Address *</label>
+                  <Label className="block text-white font-medium mb-2">Email Address *</Label>
                   <Input
                     type="email"
                     name="email"
@@ -81,7 +92,7 @@ const LeadForm = () => {
               </div>
               
               <div>
-                <label className="block text-white font-medium mb-2">Phone Number *</label>
+                <Label className="block text-white font-medium mb-2">Phone Number *</Label>
                 <Input
                   type="tel"
                   name="phone"
@@ -94,7 +105,7 @@ const LeadForm = () => {
               </div>
               
               <div>
-                <label className="block text-white font-medium mb-2">Investment Interests</label>
+                <Label className="block text-white font-medium mb-2">Investment Interests</Label>
                 <Textarea
                   name="message"
                   value={formData.message}
@@ -110,7 +121,7 @@ const LeadForm = () => {
                 size="lg" 
                 className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold py-3 text-lg transition-all duration-300 hover:scale-105"
               >
-                Get Investment Consultation
+                Send via WhatsApp
               </Button>
             </form>
           </CardContent>
