@@ -26,7 +26,7 @@ const LeadForm = () => {
 הודעה: ${formData.message || 'לא צוין'}`;
     
     // Your WhatsApp number (replace with your actual number)
-    const whatsappNumber = "972123456789"; // Replace with your actual WhatsApp number
+    const whatsappNumber = "972509482114"; // Replace with your actual WhatsApp number
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     
     // Open WhatsApp
