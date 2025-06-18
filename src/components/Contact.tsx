@@ -56,18 +56,6 @@ const Contact = () => {
             </CardContent>
           </Card>
         </div>
-        
-        <div className="mt-16 text-center">
-          <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Form Details:</h3>
-            <div className="text-left space-y-2 text-gray-700">
-              <p><strong>Full Name:</strong></p>
-              <p><strong>Phone:</strong></p>
-              <p><strong>Email:</strong></p>
-              <p><strong>Everything that interests you to register:</strong></p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

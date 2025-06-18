@@ -24,16 +24,6 @@ const Hero = () => {
           Your first step to finding opportunities in real estate investments in the municipal area. 
           Specializing in investment properties, FLIP transactions, and comprehensive market analysis.
         </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-          <Button size="lg" className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105">
-            Browse Properties
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 text-lg font-semibold transition-all duration-300">
-            Free Consultation
-          </Button>
-        </div>
       </div>
     </section>
   );
