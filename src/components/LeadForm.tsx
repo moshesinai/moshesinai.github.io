@@ -19,11 +19,11 @@ const LeadForm = () => {
     
     // For now, we'll just show a toast message
     // Once Supabase is connected, this will store data in the database
-    console.log('Form submitted:', formData);
+    console.log('Investment inquiry submitted:', formData);
     
     toast({
       title: "Thank you for your interest!",
-      description: "We'll get back to you within 24 hours.",
+      description: "I'll get back to you within 24 hours with investment opportunities.",
     });
     
     // Reset form
@@ -42,10 +42,11 @@ const LeadForm = () => {
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Ready to Get Started?
+            Ready to Start Investing?
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Let us help you find your dream property. Fill out the form below and we'll contact you soon.
+            Let me help you find profitable real estate investment opportunities. 
+            Fill out the form below and I'll contact you with personalized investment strategies.
           </p>
         </div>
         
@@ -80,26 +81,27 @@ const LeadForm = () => {
               </div>
               
               <div>
-                <label className="block text-white font-medium mb-2">Phone Number</label>
+                <label className="block text-white font-medium mb-2">Phone Number *</label>
                 <Input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                   placeholder="Enter your phone number"
                 />
               </div>
               
               <div>
-                <label className="block text-white font-medium mb-2">Message</label>
+                <label className="block text-white font-medium mb-2">Investment Interests</label>
                 <Textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
-                  placeholder="Tell us about your property needs..."
+                  placeholder="Tell me about your investment goals, budget, and timeline..."
                 />
               </div>
               
@@ -108,7 +110,7 @@ const LeadForm = () => {
                 size="lg" 
                 className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold py-3 text-lg transition-all duration-300 hover:scale-105"
               >
-                Send Message
+                Get Investment Consultation
               </Button>
             </form>
           </CardContent>

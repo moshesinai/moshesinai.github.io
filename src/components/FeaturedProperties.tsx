@@ -1,41 +1,44 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Bed, Bath, Square } from "lucide-react";
+import { MapPin, Bed, Bath, Square, TrendingUp } from "lucide-react";
 
 const properties = [
   {
     id: 1,
-    title: "Modern Downtown Loft",
-    price: "$850,000",
-    location: "Downtown District",
-    beds: 2,
+    title: "FLIP Investment Opportunity",
+    price: "High ROI Potential",
+    location: "Prime Urban Location",
+    beds: 3,
     baths: 2,
-    sqft: "1,200",
+    sqft: "1,500",
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    status: "For Sale"
+    status: "Investment",
+    description: "Quick sale opportunity with renovation potential within 18 months"
   },
   {
     id: 2,
-    title: "Luxury Family Estate",
-    price: "$1,250,000",
-    location: "Suburban Heights",
+    title: "Cashflow Positive Rental",
+    price: "Monthly Income",
+    location: "Established Neighborhood",
     beds: 4,
     baths: 3,
-    sqft: "2,800",
+    sqft: "2,200",
     image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    status: "New Listing"
+    status: "Rental Income",
+    description: "Stable rental income with potential for value appreciation"
   },
   {
     id: 3,
-    title: "Contemporary Townhouse",
-    price: "$650,000",
-    location: "Garden District",
-    beds: 3,
-    baths: 2,
-    sqft: "1,800",
+    title: "Development Potential",
+    price: "Future Growth",
+    location: "Expanding District",
+    beds: 2,
+    baths: 1,
+    sqft: "1,200",
     image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    status: "For Sale"
+    status: "Development",
+    description: "Property with zoning potential for future expansion"
   }
 ];
 
@@ -45,10 +48,10 @@ const FeaturedProperties = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Featured Properties
+            Investment Opportunities
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our handpicked selection of premium properties available now
+            Discover profitable real estate investments with proven returns and growth potential
           </p>
         </div>
         
@@ -66,18 +69,23 @@ const FeaturedProperties = () => {
                     {property.status}
                   </Badge>
                 </div>
+                <div className="absolute top-4 right-4">
+                  <TrendingUp className="h-6 w-6 text-green-500 bg-white rounded-full p-1" />
+                </div>
               </div>
               
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-bold text-gray-900">{property.title}</h3>
-                  <span className="text-2xl font-bold text-amber-600">{property.price}</span>
+                  <span className="text-lg font-bold text-amber-600">{property.price}</span>
                 </div>
                 
                 <div className="flex items-center text-gray-600 mb-4">
                   <MapPin className="h-4 w-4 mr-1" />
                   <span className="text-sm">{property.location}</span>
                 </div>
+                
+                <p className="text-sm text-gray-600 mb-4">{property.description}</p>
                 
                 <div className="flex justify-between text-sm text-gray-500 border-t pt-4">
                   <div className="flex items-center">
@@ -96,6 +104,18 @@ const FeaturedProperties = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <div className="bg-blue-50 p-8 rounded-lg max-w-4xl mx-virtual">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Understanding the 300 Rule</h3>
+            <p className="text-gray-700 leading-relaxed">
+              The 300 rule is designed to create an opinion and knowledge regarding investment properties. 
+              How can you know the total amount that should be in general search? Calculate: if your monthly expenses 
+              amount to ₪20,000, then your calculation is: 300*20,000 = ₪6,000,000. 
+              When we reach the total amount required to receive a return that enables overall search.
+            </p>
+          </div>
         </div>
       </div>
     </section>

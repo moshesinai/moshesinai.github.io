@@ -11,7 +11,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Contact our experienced real estate team today
+            Contact me for professional real estate investment consultation
           </p>
         </div>
         
@@ -22,7 +22,7 @@ const Contact = () => {
                 <Phone className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-600">(555) 123-4567</p>
+              <p className="text-gray-600">Available for consultation</p>
             </CardContent>
           </Card>
           
@@ -32,7 +32,7 @@ const Contact = () => {
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Email</h3>
-              <p className="text-gray-600">info@dreamhomes.com</p>
+              <p className="text-gray-600">moshiksinai1@gmail.com</p>
             </CardContent>
           </Card>
           
@@ -41,8 +41,8 @@ const Contact = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MapPin className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Office</h3>
-              <p className="text-gray-600">123 Main Street<br />Downtown, ST 12345</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Service Area</h3>
+              <p className="text-gray-600">Municipal Area<br />Investment Properties</p>
             </CardContent>
           </Card>
           
@@ -51,10 +51,22 @@ const Contact = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Hours</h3>
-              <p className="text-gray-600">Mon-Fri: 9AM-7PM<br />Sat-Sun: 10AM-5PM</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Availability</h3>
+              <p className="text-gray-600">By Appointment<br />Investment Consultation</p>
             </CardContent>
           </Card>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Form Details:</h3>
+            <div className="text-left space-y-2 text-gray-700">
+              <p><strong>Full Name:</strong></p>
+              <p><strong>Phone:</strong></p>
+              <p><strong>Email:</strong></p>
+              <p><strong>Everything that interests you to register:</strong></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

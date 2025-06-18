@@ -1,37 +1,37 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Home, Search, DollarSign, Users, Award, Headphones } from "lucide-react";
+import { Home, Search, DollarSign, Users, Award, TrendingUp } from "lucide-react";
 
 const services = [
   {
     icon: Search,
-    title: "Property Search",
-    description: "Expert guidance to find your perfect property match with personalized search criteria"
-  },
-  {
-    icon: DollarSign,
-    title: "Market Analysis",
-    description: "Comprehensive market insights and pricing strategies to maximize your investment"
+    title: "Personal Property Meetings",
+    description: "Meeting potential clients at their property to understand their needs and assess building characteristics, aspirations, and exact densification matching with local plans"
   },
   {
     icon: Home,
-    title: "Property Management",
-    description: "Full-service property management for investors and rental property owners"
+    title: "Property Development Planning",
+    description: "Real estate investment planning based on independent assessment, capable of financing side by side with attractive conditions in order to maximize profits and achieve optimal outcomes"
   },
   {
-    icon: Users,
-    title: "Buyer Representation",
-    description: "Dedicated representation throughout your entire home buying journey"
+    icon: DollarSign,
+    title: "Opportunities & Maximizing Potential",
+    description: "Identifying properties with potential for high returns - fitting solutions for improving life quality alongside profitable investments that match your budget and requirements"
+  },
+  {
+    icon: TrendingUp,
+    title: "FLIP Transactions",
+    description: "Quick turnaround profitable investments - buy, renovate, and sell within 18 months for maximum returns"
   },
   {
     icon: Award,
-    title: "Luxury Properties",
-    description: "Specialized expertise in high-end and luxury real estate transactions"
+    title: "Investment Analysis",
+    description: "Comprehensive market research and cashflow analysis for maximum investment potential"
   },
   {
-    icon: Headphones,
-    title: "24/7 Support",
-    description: "Round-the-clock availability for all your real estate needs and questions"
+    icon: Users,
+    title: "Why Choose Professional Investors?",
+    description: "We find quality investment properties that professionals don't reveal to the general market, generating stable rental income and long-term profit"
   }
 ];
 
@@ -41,10 +41,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Services
+            How We Execute the Process
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive real estate solutions tailored to meet your unique needs
+            Professional real estate investment consulting focused on maximizing returns and opportunities
           </p>
         </div>
         
