@@ -1,7 +1,7 @@
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
-    const whatsappNumber = "972123456789"; // Replace with your actual WhatsApp number
+    const whatsappNumber = "972509482114"; // Replace with your actual WhatsApp number
     const message = "היי משה, אני מעוניין לשמוע עוד על ליווי משקיעים והתחדשות עירונית";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
