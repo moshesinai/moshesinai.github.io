@@ -6,6 +6,7 @@ import InvestmentTypes from "@/components/InvestmentTypes";
 import WhyGuide from "@/components/WhyGuide";
 import FinancialFreedom from "@/components/FinancialFreedom";
 import Rule300 from "@/components/Rule300";
+import ImageCarousel from "@/components/ImageCarousel";
 import LeadForm from "@/components/LeadForm";
 import Contact from "@/components/Contact";
 
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Hero />
       <About />
+      <ImageCarousel />
       <Process />
       <InvestmentTypes />
       <WhyGuide />

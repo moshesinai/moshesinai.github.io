@@ -8,6 +8,15 @@ export default {
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
 	],
+	safelist: [
+		"swiper",
+		"swiper-wrapper",
+		"swiper-slide",
+		"swiper-pagination",
+		"swiper-scrollbar",
+		"swiper-button-prev",
+		"swiper-button-next",
+	  ],
 	prefix: "",
 	theme: {
 		container: {
