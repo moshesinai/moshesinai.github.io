@@ -33,7 +33,7 @@ const Contact = () => {
                 onClick={handleWhatsAppClick}
                 className="text-green-600 hover:text-green-700 font-medium"
               >
-                לחץ כאן לקשר מיידי
+                לחץ כאן לקישור מיידי
               </button>
             </CardContent>
           </Card>

@@ -72,7 +72,7 @@ const LeadForm = () => {
                   onChange={handleChange}
                   required
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/60 text-right"
-                  placeholder="הכנס את השם המלא"
+                  placeholder="הכנס/י את שמך המלא"
                 />
               </div>
               
@@ -85,7 +85,7 @@ const LeadForm = () => {
                   onChange={handleChange}
                   required
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/60 text-right"
-                  placeholder="הכנס מספר טלפון"
+                  placeholder="הכנס/י מספר טלפון"
                 />
               </div>
               
@@ -98,7 +98,7 @@ const LeadForm = () => {
                   onChange={handleChange}
                   required
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/60 text-right"
-                  placeholder="הכנס כתובת מייל"
+                  placeholder="הכנס/י כתובת מייל"
                 />
               </div>
               
@@ -110,7 +110,7 @@ const LeadForm = () => {
                   onChange={handleChange}
                   rows={4}
                   className="bg-white/20 border-white/30 text-white placeholder:text-white/60 text-right"
-                  placeholder="ספר לי על המטרות שלך, התקציב והציפיות..."
+                  placeholder="ספר/י לי על המטרות שלך, התקציב והציפיות..."
                 />
               </div>
               
