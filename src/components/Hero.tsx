@@ -28,11 +28,11 @@ const Hero = () => {
 
       <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
         <div className="flex justify-center items-center z-20 mb-10">
-          <img
-            src={logoImage}
-            alt="משה סיני לוגו"
-            className="h-24 md:h-44 lg:h-60 w-auto rounded-lg shadow-2xl border-2 border-white/20 hover:border-white/40 transition-all duration-300"
-          />
+        <img
+          src={logoImage}
+          alt="משה סיני לוגו"
+          className="h-32 md:h-56 lg:h-80 w-auto rounded-lg shadow-2xl border-2 border-white/20 hover:border-white/40 transition-all duration-300"
+        />
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in ">

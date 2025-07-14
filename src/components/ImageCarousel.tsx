@@ -19,6 +19,8 @@ import image2 from "@/assets/image2.jpeg";
 import image3 from "@/assets/image3.jpeg";
 import image4 from "@/assets/image4.jpeg";
 import image5 from "@/assets/image5.jpeg";
+import image6 from "@/assets/image6.jpeg";
+import image7 from "@/assets/image7.jpeg";
 
 const slides = [
   { id: "1", src: image1, alt: "נכס השקעה 1" },
@@ -26,6 +28,8 @@ const slides = [
   { id: "3", src: image3, alt: "נכס השקעה 3" },
   { id: "4", src: image4, alt: "נכס השקעה 4" },
   { id: "5", src: image5, alt: "נכס השקעה 5" },
+  { id: "6", src: image6, alt: "נכס השקעה 6" },
+  { id: "7", src: image7, alt: "נכס השקעה 7" },
 ];
 
 export default function ImageCarousel() {
