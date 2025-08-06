@@ -56,7 +56,7 @@ export default function ImageCarousel() {
             nextSlideMessage: "הצג פרויקט הבא",
           }}
           className="relative"
-          style={{ position: "relative" }} // חשוב - בשביל מיקום החיצים על התמונה
+          style={{ position: "relative", overflow: "visible" }}
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
@@ -67,32 +67,39 @@ export default function ImageCarousel() {
                   loading="lazy"
                   className="w-full h-64 object-cover rounded-2xl"
                 />
+
+                {/* חיצים מעל התמונה בצדדים */}
+                <style jsx>{`
+                  .swiper-button-prev,
+                  .swiper-button-next {
+                    position: absolute;
+                    top: 50%;
+                    width: 3rem;
+                    height: 3rem;
+                    margin-top: -1.5rem; /* כדי למרכז את החיצים לגובה */
+                    background: rgba(255, 255, 255, 0.7);
+                    border-radius: 50%;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+                    color: #111827;
+                    z-index: 10;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  }
+
+                  .swiper-button-prev {
+                    left: 10px;
+                  }
+
+                  .swiper-button-next {
+                    right: 10px;
+                  }
+                `}</style>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* סטייל לתיקון מיקום החיצים */}
-        <style jsx>{`
-          /* חיצים מעל התמונה, בצידי הסלייד */
-          .swiper-button-prev,
-          .swiper-button-next {
-            color: #111827; /* צבע החיצים */
-            width: 2.5rem;
-            height: 2.5rem;
-            top: 50% !important;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-          }
-          .swiper-button-prev {
-            left: 10px !important; /* קרוב לצד שמאל (RTL זה מצד ימין, אבל החיצים נשארים לפי CSS) */
-          }
-          .swiper-button-next {
-            right: 10px !important;
-          }
-        `}</style>
       </div>
     </section>
   );
