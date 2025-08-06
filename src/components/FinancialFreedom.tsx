@@ -20,7 +20,7 @@ const FinancialFreedom = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Sunrise className="h-8 w-8 text-white" />
                   </div>
-                  <p className="text-gray-700 font-medium">קום בלי שעון מעורר</p>
+                  <p className="text-gray-700 font-medium">לקום בלי שעון מעורר</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
