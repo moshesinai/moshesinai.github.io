@@ -34,7 +34,8 @@ const slides = [
 export default function ImageCarousel() {
   return (
     <section className="py-20 bg-gray-50" dir="rtl">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 relative"> {/* הוספתי relative כאן */}
+
         <h2 className="text-4xl font-bold text-center mb-8">
           פרויקטים והשקעות
         </h2>
@@ -42,21 +43,17 @@ export default function ImageCarousel() {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={20}
-          slidesPerView={1}
+          slidesPerView={3}  {/* מספר התמונות ל-3 כפי שביקשת */}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           loop={true}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
           a11y={{
             prevSlideMessage: "הצג פרויקט קודם",
             nextSlideMessage: "הצג פרויקט הבא",
           }}
           className="relative"
-          style={{ position: "relative", overflow: "visible" }}
+          style={{ overflow: "visible" }} // חשוב שהחיצים לא ייחתכו מחוץ לקונטיינר
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
@@ -67,40 +64,40 @@ export default function ImageCarousel() {
                   loading="lazy"
                   className="w-full h-64 object-cover rounded-2xl"
                 />
-
-                {/* חיצים מעל התמונה בצדדים */}
-                <style jsx>{`
-                  .swiper-button-prev,
-                  .swiper-button-next {
-                    position: absolute;
-                    top: 50%;
-                    width: 3rem;
-                    height: 3rem;
-                    margin-top: -1.5rem; /* כדי למרכז את החיצים לגובה */
-                    background: rgba(255, 255, 255, 0.7);
-                    border-radius: 50%;
-                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-                    color: #111827;
-                    z-index: 10;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    cursor: pointer;
-                  }
-
-                  .swiper-button-prev {
-                    left: 10px;
-                  }
-
-                  .swiper-button-next {
-                    right: 10px;
-                  }
-                `}</style>
               </div>
             </SwiperSlide>
           ))}
+
+          {/* חיצים מעל התמונה בצידי הסליידר */}
+          <style jsx>{`
+            .swiper-button-prev,
+            .swiper-button-next {
+              position: absolute;
+              top: 50%;
+              width: 3rem;
+              height: 3rem;
+              margin-top: -1.5rem; /* למרכז לגובה */
+              background: rgba(255, 255, 255, 0.7);
+              border-radius: 50%;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+              color: #111827;
+              z-index: 10;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              /* מיקום החיצים לצדדים יחסית ל-container */
+            }
+            .swiper-button-prev {
+              left: 10px;
+            }
+            .swiper-button-next {
+              right: 10px;
+            }
+          `}</style>
         </Swiper>
       </div>
     </section>
   );
 }
+
