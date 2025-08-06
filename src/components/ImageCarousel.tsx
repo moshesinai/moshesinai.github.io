@@ -39,66 +39,67 @@ export default function ImageCarousel() {
           פרויקטים והשקעות
         </h2>
 
-        <div className="relative">
-          <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={20}
-            slidesPerView={3}
-            navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            loop={true}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              1024: { slidesPerView: 3 },
-            }}
-            a11y={{
-              prevSlideMessage: "הצג פרויקט קודם",
-              nextSlideMessage: "הצג פרויקט הבא",
-            }}
-            className="relative"
-            style={{ overflow: "visible" }}
-          >
-            {slides.map((slide) => (
-              <SwiperSlide key={slide.id}>
-                <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                  <img
-                    src={slide.src}
-                    alt={slide.alt}
-                    loading="lazy"
-                    className="w-full h-64 object-cover rounded-2xl"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          loop={true}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          a11y={{
+            prevSlideMessage: "הצג פרויקט קודם",
+            nextSlideMessage: "הצג פרויקט הבא",
+          }}
+          className="relative"
+          style={{ position: "relative", overflow: "visible" }}
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  loading="lazy"
+                  className="w-full h-64 object-cover rounded-2xl"
+                />
 
-          <style jsx>{`
-            .swiper-button-prev,
-            .swiper-button-next {
-              color: white;
-              width: 3rem;
-              height: 3rem;
-              top: 50% !important;
-              transform: translateY(-50%);
-              background: rgba(255, 255, 255, 0.6);
-              border-radius: 50%;
-              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-              z-index: 20;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
+                {/* חיצים מעל התמונה בצדדים */}
+                <style jsx>{`
+                  .swiper-button-prev,
+                  .swiper-button-next {
+                    position: absolute;
+                    top: 50%;
+                    width: 3rem;
+                    height: 3rem;
+                    margin-top: -1.5rem; /* כדי למרכז את החיצים לגובה */
+                    background: rgba(255, 255, 255, 0.7);
+                    border-radius: 50%;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+                    color: #111827;
+                    z-index: 10;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  }
 
-            .swiper-button-prev {
-              left: 10px !important;
-            }
+                  .swiper-button-prev {
+                    left: 10px;
+                  }
 
-            .swiper-button-next {
-              right: 10px !important;
-            }
-          `}</style>
-        </div>
+                  .swiper-button-next {
+                    right: 10px;
+                  }
+                `}</style>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
