@@ -5,7 +5,7 @@ import {
   Navigation,
   Pagination,
   Scrollbar,
-  A11y
+  A11y,
 } from "swiper/modules";
 
 // Swiper styles
@@ -23,55 +23,4 @@ import image6 from "@/assets/image6.jpeg";
 import image7 from "@/assets/image7.jpeg";
 
 const slides = [
-  { id: "1", src: image1, alt: "נכס השקעה 1" },
-  { id: "2", src: image2, alt: "נכס השקעה 2" },
-  { id: "3", src: image3, alt: "נכס השקעה 3" },
-  { id: "4", src: image4, alt: "נכס השקעה 4" },
-  { id: "5", src: image5, alt: "נכס השקעה 5" },
-  { id: "6", src: image6, alt: "נכס השקעה 6" },
-  { id: "7", src: image7, alt: "נכס השקעה 7" },
-];
-
-export default function ImageCarousel() {
-  return (
-    <section className="py-20 bg-gray-50" dir="rtl">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">
-          פרויקטים והשקעות
-        </h2>
-
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          loop={true}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          a11y={{
-            prevSlideMessage: "הצג פרויקט קודם",
-            nextSlideMessage: "הצג פרויקט הבא",
-          }}
-          className="relative"
-        >
-          {slides.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <div className="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img
-                  src={slide.src}
-                  alt={slide.alt}
-                  loading="lazy"
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section>
-  );
-}
+  { id: "1", src: image1, alt: "נכס השקעה 1
